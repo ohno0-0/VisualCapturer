@@ -1,0 +1,128 @@
+# ==========================================
+# 1. C++ 编译产物
+# ==========================================
+*.obj
+*.o
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# ==========================================
+# 2. Qt 相关
+# ==========================================
+# 由 qmake 生成的文件
+Makefile
+*.Debug
+*.Release
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+
+# Qt Creator 项目设置文件 (包含本地路径，建议忽略)
+*.pro.user
+*.pro.user.*
+# 如果你的项目使用 CMake，通常会忽略 CMakeLists.txt.user
+CMakeLists.txt.user
+
+# ==========================================
+# 3. CMake 构建产物 (现代Qt常用)
+# ==========================================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+# 构建目录通常命名为 build, out, cmake-build-debug 等
+build/
+out/
+cmake-build-debug/
+cmake-build-release/
+
+# ==========================================
+# 4. IDE 和 编辑器配置
+# ==========================================
+
+# --- Qt Creator ---
+.idea/
+config.h
+
+# --- Visual Studio ---
+.vs/
+*.vcxproj
+*.vcxproj.*
+*.sln
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.pdb
+ipch/
+Win32/
+x64/
+*.ilk
+*.log
+
+# --- CLion / IntelliJ ---
+.idea/
+cmake-build-*/
+
+# --- VS Code ---
+.vscode/
+# 如果你希望保留 VS Code 的配置在仓库中，可以注释掉上一行
+# 但通常建议只保留 launch.json 和 tasks.json，忽略其他的
+
+# --- Xcode (macOS) ---
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+
+# ==========================================
+# 5. 操作系统生成文件
+# ==========================================
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Linux ---
+*~
+.directory
+
+# ==========================================
+# 6. 依赖库与资源文件 (视情况而定)
+# ==========================================
+
+# 如果你使用 git submodule 管理依赖，忽略根目录下的第三方库文件夹
+# 但如果你没有使用 submodule，而是直接拷贝了 dll/so，这里要小心
+# 通常建议忽略巨大的视频测试文件
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.flv
+
+# 如果不想忽略测试视频，可以在前面加 ! 号，或者忽略特定目录，例如：
+# !tests/resources/*.mp4
+
+# ==========================================
+# 7. 其他
+# ==========================================
+# 日志文件
+*.log

@@ -1,0 +1,380 @@
+QWidget#MainQWidget {
+    color: white;
+    font: normal 12px '微软雅黑';
+    background-color: rgb(51,51,51);
+    border: none;
+}
+/*************************************************************************QWidget*****************************************************************************/
+QMainWindow#RobCAMVideo
+{
+    background-color: rgb(235, 235, 235);
+}
+
+/**********************************************************************/
+QTabBar#toolBarTabBar
+{
+    border: none;
+    font:normal 15px '微软雅黑';
+}
+
+QTabBar#toolBarTabBar::tab
+{
+    height: 30px;
+    width: 50px;
+    font:normal 15px '微软雅黑';
+    color: white;
+    background: rgb(62, 62, 63);
+    border-left: none;
+    border-right: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+QTabBar#toolBarTabBar::tab:selected {
+    border: none;
+    border-right: 1px solid black;
+    color: white;
+    background-color: rgb(51,51,51);
+}
+QTabBar#toolBarTabBar::tab:hover {
+    border: none;
+    border-right: 1px solid black;
+    color: white;
+    background-color: rgb(51,51,51);
+}
+
+/************************************************************************QLabel样式****************************************************************************/
+QLabel
+{
+    color: rgb(0, 0, 0);
+    font:normal 12px '微软雅黑';
+}
+QLabel#_13pxWhiteQLabel {
+    color: rgb(0, 0, 0);
+    font: normal 13px '微软雅黑';
+}
+QLabel#_15pxWhiteQLabel {
+    color: rgb(0, 0, 0);
+    font: normal 15px '微软雅黑';
+}
+QLabel#_20pxWhiteQLabel {
+    color: rgb(0, 0, 0);
+    font: normal 20px '微软雅黑';
+}
+QLabel#blueLabel
+{
+    border: 1px solid rgb(50, 170, 234);
+    border-right: none;
+    color: white;
+    background-color: blue;
+    font:normal 15px '微软雅黑';
+}
+QLabel#greenLabel
+{
+    border: 1px solid rgb(50, 170, 234);
+    border-right: none;
+    color: white;
+    background-color: rgb(46, 235, 78);
+    font:normal 15px '微软雅黑';
+}
+QLabel#redLabel
+{
+    border: 1px solid rgb(50, 170, 234);
+    border-right: none;
+    color: white;
+    background-color: red;
+    font:normal 15px '微软雅黑';
+}
+QLabel#StyleLabelDockWidgetRobotName
+{
+    border: none;
+    border-right: none;
+    color: rgb(85, 151, 238);
+    font:normal 18px '微软雅黑';
+}
+QLabel#Tight_Dark_Label
+{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgb(51,51,51);
+    color: white;
+}
+QLabel#TwinComSettingWidget_12pxWhiteQLabel {
+    border: 1px solid rgb(50, 170, 234);
+    border-left: none;
+    color: white;
+    font: normal 12px '微软雅黑';
+}
+
+QLabel#TitleLabel{
+    border: 0px solid rgb(255, 255, 255);
+    border-left: none;
+    color: rgb(0, 0, 0);
+    font: normal 28px '微软雅黑';
+}
+
+/************************************************************************QTextEdit样式****************************************************************************/
+QTextEdit
+{
+    background-color: rgb(51,51,51);  /* 灰色背景 */
+    color: white;                /* 白色文字 */
+    font: normal 12px '微软雅黑';
+    border: 1px solid #444444;    /* 边框颜色 */
+}
+
+/************************************************************************QPushButton基础按钮样式****************************************************************************/
+QPushButton#StyleQPushButton {
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    color: #f0f0f0;
+    background-color: #337bff;
+    font: normal 15px '微软雅黑';
+    padding: 5px 12px;
+    min-width: 80px;
+    margin: 2px;
+}
+/* 悬停时模拟阴影效果 */
+QPushButton#StyleQPushButton:hover {
+    background-color: #2572ff;
+    border: 1px solid #6d8cb0;
+    padding: 6px 11px 4px 13px; /* 微调padding模拟按下效果 */
+}
+/* 按下时模拟更深阴影 */
+QPushButton#StyleQPushButton:pressed {
+    background-color: #1351c3;
+    border: 1px solid #38738e;
+    padding: 7px 10px 3px 14px; /* 进一步调整 */
+}
+QPushButton#StyleQPushButton:disabled{
+    color: gray;
+}
+QPushButton#StyleQPushButton:checked{
+    border: 2px solid rgb(120, 120, 120);
+    background-color: rgb(41,69,92);
+}
+
+QPushButton#TitleQPushButton {
+    border: 0px solid #8a8a8a;
+    border-radius: 4px;
+    color: #f0f0f0;
+    background-color: #337bff;
+    font: normal 15px '微软雅黑';
+    padding: 5px 12px;
+    min-width: 80px;
+    margin: 2px;
+}
+/* 悬停时模拟阴影效果 */
+QPushButton#TitleQPushButton:hover {
+    background-color: #2572ff;
+    border: 1px solid #6d8cb0;
+    padding: 6px 11px 4px 13px; /* 微调padding模拟按下效果 */
+}
+/* 按下时模拟更深阴影 */
+QPushButton#TitleQPushButton:pressed {
+    background-color: #1351c3;
+    border: 1px solid #38738e;
+    padding: 7px 10px 3px 14px; /* 进一步调整 */
+}
+QPushButton#TitleQPushButton:disabled{
+    color: gray;
+}
+QPushButton#TitleQPushButton:checked{
+    border: 1px solid rgb(120, 120, 120);
+    background-color: rgb(41,69,92);
+}
+/*QPushButton最小化*/
+QPushButton#MinButton
+{
+    border:none;
+    background: url(:/Resource/images/min.png) no-repeat center;
+}
+QPushButton#MinButton:hover
+{
+    background-color: rgba(236,236,236,155);
+}
+/*QPushButton关闭*/
+QPushButton#CloseButton
+{
+    border:none;
+    background: url(:/Resource/images/close.png) no-repeat center;
+}
+QPushButton#CloseButton:hover
+{
+   background-color: rgb(255,84,57);
+}
+
+/************************************************************************QLineEdit样式****************************************************************************/
+QLineEdit#StyleQLineEdit
+{
+    /*dyj0311*/
+    border: 1px solid rgb(117, 121, 122);
+    color: white;
+    font: normal 12px '微软雅黑';
+    background: rgb(51,51,51) ;
+}
+
+QPlainTextEdit#YTQPlainTextEditStyle{
+    border: 1px solid rgb(117, 121, 122);
+    color: rgb(0, 0, 0);
+    font: normal 12px '微软雅黑';
+    background: rgb(255, 255, 255) ;
+}
+
+/************************************************************************QMessageBox样式****************************************************************************/
+QMessageBox QLabel
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+	color: black;
+	font: normal 15px '微软雅黑';
+}
+
+/************************************************************************QRadioButton样式****************************************************************************/
+/*1.图标16px*/
+QRadioButton#_16pxStyleQRadioButton
+{
+    color: white;
+    font:normal 12px '微软雅黑';
+}
+QRadioButton#_16pxStyleQRadioButton:disabled
+{
+    color: gray;
+    font:normal 12px '微软雅黑';
+}
+QRadioButton#_16pxStyleQRadioButton::indicator 
+{
+    height: 16px;
+    width: 16px;
+}
+QRadioButton#_16pxStyleQRadioButton::indicator::unchecked 
+{
+    image: url(:/Resource/images/radioButton.png);
+}
+QRadioButton#_16pxStyleQRadioButton::indicator::checked 
+{
+    image: url(:/Resource/images/radioButton-checked.png);
+}
+/*2.图标18px*/
+QRadioButton#_18pxStyleQRadioButton
+{
+    color: white;
+    font:normal 13px '微软雅黑';
+}
+QRadioButton#_18pxStyleQRadioButton:disabled
+{
+    color: gray;
+    font:normal 13px '微软雅黑';
+}
+QRadioButton#_18pxStyleQRadioButton::indicator 
+{
+    height: 18px;
+    width: 18px;
+}
+QRadioButton#_18pxStyleQRadioButton::indicator::unchecked 
+{
+    image: url(:/Resource/images/radioButton.png);
+}
+QRadioButton#_18pxStyleQRadioButton::indicator::checked 
+{
+    image: url(:/Resource/images/radioButton-checked.png);
+}
+/*3.图标20px*/
+QRadioButton#_20pxStyleQRadioButton
+{
+    color: white;
+    font:normal 15px '微软雅黑';
+}
+QRadioButton#_20pxStyleQRadioButton:disabled
+{
+    color: gray;
+    font:normal 15px '微软雅黑';
+}
+QRadioButton#_20pxStyleQRadioButton::indicator 
+{
+    height: 20px;
+    width: 20px;
+}
+QRadioButton#_20pxStyleQRadioButton::indicator::unchecked 
+{
+    image: url(:/Resource/images/radioButton.png);
+}
+QRadioButton#_20pxStyleQRadioButton::indicator::checked 
+{
+    image: url(:/Resource/images/radioButton-checked.png);
+}
+/*指令运行状�?*/
+QRadioButton#_15pxStyleQRadioButtonSimulation
+{
+    color: white;
+    font:normal 15px '微软雅黑';
+}
+QRadioButton#_15pxStyleQRadioButtonSimulation::indicator 
+{
+    height: 15px;
+    width: 15px;
+}
+QRadioButton#_15pxStyleQRadioButtonSimulation::indicator::unchecked 
+{
+    image: url(:/Resource/images/SimulationAction.png);
+}
+QRadioButton#_15pxStyleQRadioButtonSimulation::indicator::checked 
+{
+    image: url(:/Resource/images/SimulationAction.png);
+}
+
+/************************************************************************QComboBox****************************************************************************/
+/*QComboBox样式*/
+QComboBox#StyleQComboBox
+{
+    /*dyj0311*/
+    border: 1px solid rgb(120, 120, 120);
+    color: white;
+    font: normal 15px '微软雅黑';
+    background: rgb(51,51,51) ;
+}
+QComboBox#StyleQComboBox::drop-down
+{
+    border: none;
+}
+QComboBox#StyleQComboBox::down-arrow {
+    width: 15px;
+    height: 15px;
+    background: transparent; 
+    background: rgb(51,51,51) ;
+    border-image: url(:/Resource/images/downArrow.png);
+}
+QComboBox#StyleQComboBox::down-arrow:hover {
+    width: 15px;
+    height: 15px;
+    border-image: url(:/Resource/images/downArrow-hover.png);
+}
+QComboBox#StyleQComboBox QAbstractItemView {
+    border: 1px solid rgb(109, 111, 112);
+	border-top:none;color: white;
+	background-color:rgb(51, 51, 51);
+    outline:0px
+}
+/************************************************************************QComboBox****************************************************************************/
+
+/************************************************************************QCheckBox****************************************************************************/
+/*QCheckBox*/
+QCheckBox#TcpServerCheckBox
+{
+    color: white;
+    font:normal 15px '微软雅黑';
+}
+QCheckBox#TcpServerCheckBox:disabled
+{
+    color: gray;
+}
+
+QCheckBox#QCheckBoxAxisConfigSwitch
+{
+    color: white;
+}
+QCheckBox#QCheckBoxAxisConfigSwitch:disabled
+{
+    color: gray;
+}
+/************************************************************************QCheckBox****************************************************************************/
