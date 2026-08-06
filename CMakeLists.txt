@@ -83,7 +83,7 @@ pkg_check_modules(FFMPEG REQUIRED IMPORTED_TARGET
 #     inc/HPLFramelessWidget.h
 #     inc/HPLVideo.h
 #     inc/HPLVideoCompressor.h)
-file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/inc/*.h)
+file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 #include_directories(${PROJECT_SOURCE_DIR}/inc)
 
 
@@ -189,7 +189,7 @@ endif()
 
 # 设置可执行文件输出名称
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME "HPLVideoApp"
+    OUTPUT_NAME "VisualCatcherApp"
     DEBUG_POSTFIX "_d"
     WIN32_EXECUTABLE ON  # Windows 下作为 GUI 应用运行
 )
