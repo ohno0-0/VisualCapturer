@@ -1,0 +1,81 @@
+# VisualCatcher
+
+本项目为蒸汽发生器视频检查装置控制系统的辅助软件，专门为捕获相机画面、提供视频录制、截图与水印功能而做。
+
+## 功能
+
+- 相机画面实时预览（支持多摄像头切换）
+- 视频录制（H.264 编码，FFmpeg 编码器）
+- 截图保存（JPG）
+- 帧水印叠加（时间戳，支持中文，基于 OpenCV freetype 模块 + 文泉驿微米黑字体）
+- 工单号管理（CSV 读取，视频/图片按工单归档）
+
+## 依赖
+
+| 依赖 | 版本要求 | 说明 |
+|------|---------|------|
+| CMake | >= 3.15 | 构建系统 |
+| C++ 编译器 | 支持 C++11 | GCC 9+ / MSVC / MinGW |
+| Qt | 5 或 6 | 需要 Core、Gui、Widgets 模块 |
+| OpenCV | 4.x | **需包含 contrib 的 freetype 模块**（中文水印用） |
+| FFmpeg 开发库 | - | libavcodec、libavformat、libavutil、libswscale、libswresample |
+| pkg-config | - | 用于查找 FFmpeg |
+
+### Ubuntu 24.04 / WSL2 安装依赖
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential cmake pkg-config \
+    qtbase5-dev \
+    libopencv-dev \
+    libavcodec-dev libavformat-dev libavutil-dev \
+    libswscale-dev libswresample-dev
+```
+
+> Ubuntu 24.04 的 `libopencv-dev`（4.6.0）已自带 contrib 的 freetype 模块，可直接使用。
+> 若自行源码编译 OpenCV，需通过 `OPENCV_EXTRA_MODULES_PATH` 引入 opencv_contrib 并启用 freetype 模块。
+> 若使用 Qt6，将上面的 `qtbase5-dev` 换成 `qt6-base-dev`。
+
+## 编译
+
+```bash
+cd VisualCatcher
+cmake -B build -DCMAKE_BUILD_TYPE=Release ..
+cmake --build build --config Release
+```
+
+编译选项：
+
+- `-DQT_VERSION=5` 或 `6`：选择 Qt 大版本（默认 5）
+
+产物：`build/bin/VisualCatcherApp`
+
+## 运行
+
+```bash
+cd build/bin
+./VisualCatcherApp
+```
+
+- 首次启动会自动在可执行文件同级目录创建 `WorkOrder/`、`VideoPath/`、`PhotoPath/`、`logs/` 目录。
+- Linux/WSL2 下需要图形环境（WSLg 自带，`DISPLAY=:0`）。
+- WSL2 默认没有 `/dev/video*`，需要在 Windows 侧用 [usbipd-win](https://github.com/dorssel/usbipd-win) 把 USB 摄像头附加进 WSL 才能采集画面。
+
+## 目录结构
+
+```
+VisualCatcher/
+├── CMakeLists.txt
+├── include/        # 头文件
+├── src/            # 源码
+├── Resource/       # 运行时资源（QSS 样式、字体、图标）
+│   ├── FF-Video.css        # 界面样式表
+│   ├── wqy-microhei.ttc    # 中文字体（水印渲染）
+│   └── *.png               # 窗口按钮图标
+└── build/          # 构建目录（生成）
+```
+
+## 注意事项
+
+- **资源路径在编译期写死**：`Resource/` 目录的绝对路径通过 `RESOURCE_DIR` 宏编译进可执行文件。**重命名或移动项目目录后必须重新编译**，否则样式表加载失败、字体加载抛出 OpenCV 异常导致崩溃。
+- 摄像头以 `cv::CAP_DSHOW` 后端打开（FFVideo.cpp），该后端仅 Windows 可用；Linux 下点击打开相机会提示"无法打开相机"，属正常现象，不影响其他功能。

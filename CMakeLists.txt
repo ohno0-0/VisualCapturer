@@ -110,7 +110,7 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
 
 # 正确设置包含目录
 target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${OpenCV_INCLUDE_DIRS}
 )
 
